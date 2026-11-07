@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <title>AI追星全程行程规划</title>
+    <style>
+        body{padding:30px;font-size:16px;}
+        input{margin:6px 0;padding:6px;width:260px;}
+        button{padding:8px 20px;background:#0066cc;color:#fff;border:none;border-radius:4px;cursor:pointer;}
+        #result{margin-top:20px;white-space:pre-line;line-height:1.8;}
+    </style>
+</head>
+<body>
+    <h2>全网实时追星智能行程规划</h2>
+    <div>
+        出发城市：<input id="startCity" type="text" placeholder="例如：沈阳"><br>
+        演出城市：<input id="targetCity" type="text" placeholder="例如：北京"><br>
+        演唱会日期：<input id="showDate" type="date"><br>
+        提前出行天数：<input id="beforeDay" type="number" value="1"><br>
+        延后返程天数：<input id="afterDay" type="number" value="1"><br>
+        出行偏好：<input id="prefer" placeholder="性价比/省时/舒适"><br>
+        整体预算：<input id="budget" placeholder="填写大致预算"><br>
+        <button onclick="getPlan()">立即生成完整行程</button>
+    </div>
+    <div id="result"></div>
+
+<script>
+async function getPlan(){
+    let obj = {
+        start_city:document.getElementById("startCity").value,
+        target_city:document.getElementById("targetCity").value,
+        show_date:document.getElementById("showDate").value,
+        before_days:parseInt(document.getElementById("beforeDay").value),
+        after_days:parseInt(document.getElementById("afterDay").value),
+        user_prefer:document.getElementById("prefer").value,
+        budget:document.getElementById("budget").value
+    }
+    document.getElementById("result").innerText = "正在实时抓取演出、火车、机票、酒店数据，AI分析规划中，请稍等...";
+    let res = await fetch("/api/star-trip",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(obj)
+    })
+    let data = await res.json();
+    document.getElementById("result").innerText = data.trip_plan;
+}
+</script>
+</body>
+</html>
