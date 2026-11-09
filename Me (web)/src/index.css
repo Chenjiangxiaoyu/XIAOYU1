@@ -1,0 +1,6 @@
+:root { font-family: 'Microsoft YaHei UI','Microsoft YaHei','PingFang SC',sans-serif; color:#353533; background:#f4f4f2; font-synthesis:none; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; }
+* { box-sizing:border-box; }
+html,body,#root { width:100%; min-width:320px; height:100%; margin:0; }
+body { overflow:hidden; }
+button,a { font:inherit; }
+button { color:inherit; }

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F7F5"/>
+      <stop offset=".72" stop-color="#F1F1EF"/>
+      <stop offset="1" stop-color="#E8E8E5"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="800" y1="430" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0EFEC"/>
+      <stop offset="1" stop-color="#FAFAF8"/>
+    </linearGradient>
+    <radialGradient id="haze" cx="0" cy="0" r="1" gradientTransform="matrix(0 365 -780 0 800 446)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#FFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values=".3 0 0 0 .7 .3 0 0 0 .7 .3 0 0 0 .7 0 0 0 .045 0"/>
+    </filter>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1600v900H0z"/>
+  <path fill="url(#haze)" d="M0 0h1600v900H0z"/>
+
+  <!-- Light, floating pencil clouds keep the room open to the sky. -->
+  <g stroke="#858581" stroke-opacity=".27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#FFF" fill-opacity=".32" d="M72 252c-19-3-25-18-17-32 6-11 20-16 35-14 4-24 30-35 51-20 13-29 54-33 71-8 22-12 52 0 55 23 26-5 46 9 43 27-2 16-24 24-54 23-48 9-143 8-184 1Z"/>
+    <path fill="#FFF" fill-opacity=".22" d="M1240 196c-18-4-23-18-15-31 7-11 20-15 34-12 5-21 28-31 47-18 12-25 48-28 62-6 20-10 47 0 50 21 23-4 40 9 37 25-3 15-21 21-47 20-42 7-132 8-168 1Z"/>
+    <path fill="#FFF" fill-opacity=".28" d="M356 372c-13-2-18-13-12-23 5-8 15-12 26-10 4-16 21-24 36-14 9-19 37-22 48-5 16-8 37 0 39 16 19-3 32 7 29 19-2 11-17 17-37 16-33 6-103 6-129 1Z"/>
+    <path fill="#FFF" fill-opacity=".2" d="M1090 340c-11-3-15-12-10-21 5-7 13-10 22-8 4-14 19-20 31-12 8-16 31-18 41-4 13-7 31 0 33 14 16-3 27 6 25 16-2 10-14 14-31 14-28 5-87 5-111 1Z"/>
+  </g>
+
+  <!-- Open, sketch-lined floor converges into the distance without enclosing walls. -->
+  <path d="M800 438 1600 900H0L800 438Z" fill="url(#ground)" stroke="#8C8C88" stroke-opacity=".26" stroke-width="2"/>
+  <g stroke="#858581" stroke-opacity=".24" stroke-width="2">
+    <path d="M800 438 95 900M800 438 300 900M800 438 500 900M800 438 680 900M800 438 920 900M800 438 1100 900M800 438 1300 900M800 438 1505 900"/>
+    <path d="M640 530c108 13 212 13 320 0M470 635c220 22 440 22 660 0M255 760c360 31 730 31 1090 0M52 868c500 42 996 42 1496 0"/>
+  </g>
+  <g stroke="#A2A29E" stroke-opacity=".16" stroke-width="1">
+    <path d="M800 438 176 900M800 438 375 900M800 438 575 900M800 438 1025 900M800 438 1225 900M800 438 1424 900"/>
+    <path d="M572 580c151 14 305 14 456 0M365 700c290 24 580 24 870 0M152 820c430 35 866 35 1296 0"/>
+  </g>
+  <path d="M0 438c281 14 516 8 800 0 280-8 534 1 800 0" stroke="#858581" stroke-opacity=".17" stroke-width="2"/>
+  <path filter="url(#paper)" opacity=".22" d="M0 0h1600v900H0z"/>
+</svg>
