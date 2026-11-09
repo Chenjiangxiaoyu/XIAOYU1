@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'Dance/**'
+      - 'Me (web)/**'
       - 'site/**'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
@@ -13,7 +14,7 @@ permissions:
 
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -26,15 +27,26 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: Dance/package-lock.json
+          cache-dependency-path: |
+            Dance/package-lock.json
+            Me (web)/package-lock.json
       - name: Install Dance dependencies
         run: npm ci --prefix Dance
       - name: Build Dance for GitHub Pages
         run: npm run build --workspace client -- --base=/XIAOYU1/Dance/
         working-directory: Dance
+      - name: Install personal website dependencies
+        run: npm ci --prefix "Me (web)"
+      - name: Build personal website
+        run: npm run build --prefix "Me (web)"
       - name: Assemble Pages site
         run: |
-          mkdir -p site/Dance
+          mkdir -p /tmp/project-links
+          cp -a site/. /tmp/project-links/
+          rm -rf site
+          mkdir -p site/project-links site/Dance
+          cp -a "Me (web)/dist/." site/
+          cp -a /tmp/project-links/. site/project-links/
           cp -a Dance/client/dist/. site/Dance/
       - name: Configure Pages
         uses: actions/configure-pages@v5
