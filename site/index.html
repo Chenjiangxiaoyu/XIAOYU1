@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f1eb">
+<title>小鱼的项目作品集</title>
+<style>
+:root{color-scheme:light;--ink:#172c2a;--muted:#61706d;--line:#d9dfd9;--paper:#f4f1eb;--card:#fffefa;--green:#176e5b;--mint:#dcece4;--amber:#f5ebd5}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1080px;margin:auto;padding:60px 24px 80px}.eyebrow{color:var(--green);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(36px,7vw,64px);line-height:1.05;letter-spacing:-.04em;margin:14px 0 18px;max-width:780px}
+.lead{font-size:18px;color:var(--muted);max-width:740px;margin:0 0 34px}
+.repo{display:inline-flex;gap:8px;align-items:center;color:var(--green);font-weight:700;text-decoration:none;border:1px solid #abc8bb;border-radius:999px;padding:9px 15px;margin-bottom:42px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+article{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;min-height:248px}
+.tag{align-self:flex-start;background:var(--mint);color:#20594e;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700}
+.tag.later{background:var(--amber);color:#755819}h2{font-size:22px;margin:16px 0 6px}p{color:var(--muted);margin:0 0 16px}
+a.link{margin-top:auto;color:var(--green);font-weight:700;text-decoration:none}a.link:hover{text-decoration:underline}
+.note{margin-top:28px;border-left:3px solid var(--green);padding:12px 16px;color:var(--muted);background:#eae9e1;border-radius:0 10px 10px 0}
+footer{margin-top:44px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">PROJECT PORTFOLIO</div>
+<h1>项目作品集</h1>
+<p class="lead">这里可以浏览在线体验和项目源码。在线网页与源码仓库是不同的链接；需要服务器或桌面环境的项目会标明运行方式。</p>
+<a class="repo" href="https://github.com/Chenjiangxiaoyu/XIAOYU1">查看 GitHub 仓库 ↗</a>
+<section class="grid" aria-label="项目列表">
+<article><span class="tag">网页体验</span><h2>Dance</h2><p>AI 舞蹈健身教学系统。前端在浏览器运行，可在支持摄像头的浏览器体验。</p><a class="link" href="./Dance/">打开在线体验 →</a></article>
+<article><span class="tag later">需后端服务</span><h2>ECHO</h2><p>评价反馈采集与分析系统。完整功能依赖 Python 后端、数据库和模型密钥，当前仅公开源码。</p><a class="link" href="https://github.com/Chenjiangxiaoyu/XIAOYU1/tree/main/ECHO">查看源码 →</a></article>
+<article><span class="tag later">需后端服务</span><h2>Star</h2><p>追星行程规划系统。需要 Python 后端、外部抓取服务和 API 配置，当前仅公开源码。</p><a class="link" href="https://github.com/Chenjiangxiaoyu/XIAOYU1/tree/main/Star">查看源码 →</a></article>
+<article><span class="tag later">Windows 本地工具</span><h2>CATCH</h2><p>直拍人物追踪工具。当前是 Python 桌面程序，需要在 Windows 本机运行，不是浏览器网页。</p><a class="link" href="https://github.com/Chenjiangxiaoyu/XIAOYU1/tree/main/CATCH">查看源码与说明 →</a></article>
+<article><span class="tag later">Windows 桌面游戏</span><h2>2012Escape</h2><p>C++ / EasyX 游戏。需要 Windows 与 EasyX 环境编译运行；当前仓库提供源码和资源。</p><a class="link" href="https://github.com/Chenjiangxiaoyu/XIAOYU1/tree/main/2012Escape">查看源码与说明 →</a></article>
+</section>
+<div class="note">GitHub Pages 只能托管静态网页。ECHO、Star、CATCH 和 2012Escape 要提供完整在线体验，还需要部署后端或将桌面程序改造成网页。</div>
+<footer>源码公开在 GitHub；各项目依赖和运行方式以项目 README 为准。</footer>
+</main></body></html>
