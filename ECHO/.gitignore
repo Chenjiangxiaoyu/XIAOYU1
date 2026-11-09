@@ -1,0 +1,10 @@
+backend/.env
+backend/__pycache__/
+
+backend/*.sqlite3*
+backend/config.local.json
+
+backend/*.log
+
+evals/__pycache__/
+evals/runs/
