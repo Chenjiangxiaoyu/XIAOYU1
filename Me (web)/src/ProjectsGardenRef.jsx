@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import './ProjectsGardenRef.css';
+import { publicAsset } from './utils/publicAsset.js';
 
 const PROJECT_ORDER = [
   'AI 追星出行规划系统',
@@ -154,7 +155,7 @@ function ProjectCardDeck({ project, onClose }) {
     <button type="button" className="project-star-close" onClick={onClose} aria-label="关闭 STAR 卡片">×</button>
     {media.length > 0 && <div className={"project-media-float" + (media.length > 2 ? " project-media-float--multi" : "") + (media.length > 4 ? " project-media-float--many" : "")} aria-label={project.heading + " 项目界面截图"}>
       {media.map((image, index) => <button type="button" key={image.src} className={"project-media-float__item project-media-float__item--" + (index % 2 ? "analysis" : "select")} style={{ "--media-order": index }} onClick={(event) => { event.stopPropagation(); setExpandedMedia(image); }} aria-label={"放大查看：" + image.label}>
-        <img src={image.src} alt={image.alt} /><span className="project-media-float__caption">{image.label}</span>
+        <img src={publicAsset(image.src)} alt={image.alt} /><span className="project-media-float__caption">{image.label}</span>
       </button>)}
     </div>}
     <div className="project-card-stack" onClick={(event) => event.stopPropagation()} aria-label={`${project.heading} 项目 STAR 卡片`}>
@@ -169,7 +170,7 @@ function ProjectCardDeck({ project, onClose }) {
     </div>
     {expandedMedia && <div className="project-media-lightbox" role="dialog" aria-modal="true" aria-label={expandedMedia.label} onClick={(event) => { event.stopPropagation(); setExpandedMedia(null); }}>
       <button type="button" className="project-media-lightbox__close" onClick={(event) => { event.stopPropagation(); setExpandedMedia(null); }} aria-label="关闭图片">×</button>
-      <figure className="project-media-lightbox__figure" onClick={(event) => event.stopPropagation()}><img src={expandedMedia.src} alt={expandedMedia.alt} /><figcaption>{expandedMedia.label}</figcaption></figure>
+      <figure className="project-media-lightbox__figure" onClick={(event) => event.stopPropagation()}><img src={publicAsset(expandedMedia.src)} alt={expandedMedia.alt} /><figcaption>{expandedMedia.label}</figcaption></figure>
     </div>}
   </div>;
 }

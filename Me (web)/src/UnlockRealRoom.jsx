@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import './UnlockRealRoom.css';
+import { publicAsset } from './utils/publicAsset.js';
 
 const gallery = [
-  { title: '3D人物原型', caption: '把熟悉的自己，做成可以进入三维空间的角色。', image: '/unlock-real/prototype.jpg', position: 'card--prototype' },
-  { title: '滑雪', caption: '8岁开始滑雪，熟练单板、双板，坚持热爱。', image: '/unlock-real/skiing.jpg', position: 'card--ski' },
-  { title: '羽毛球', caption: '在球场上接住每一次来球。', image: '/unlock-real/badminton.jpg', position: 'card--badminton' },
-  { title: '篮球', caption: '和队友一起跑动、传球、投篮。', image: '/unlock-real/basketball.jpg', position: 'card--basketball' },
-  { title: '攀岩', caption: '沿着路线向上，试着突破自己的高度。', image: '/unlock-real/climbing.jpg', position: 'card--climbing' },
-  { title: '卡丁车', caption: '坐进驾驶舱，体验赛道上的速度。', image: '/unlock-real/karting.jpg', position: 'card--karting' },
-  { title: '高尔夫', caption: '在夜色中挥杆，感受击球的节奏。', image: '/unlock-real/golf.jpg', position: 'card--golf' },
-  { title: '花样滑冰', caption: '在冰面上练习平衡与旋转。', image: '/unlock-real/figure-skating.jpg', position: 'card--skating' },
-  { title: '保龄球', caption: '瞄准球道，等待球瓶倒下的瞬间。', image: '/unlock-real/bowling.jpg', position: 'card--bowling' },
-  { title: '滑板', caption: '在路面上练习动作，享受滑行。', image: '/unlock-real/skateboarding.jpg', position: 'card--skateboarding' },
+  { title: '3D人物原型', caption: '把熟悉的自己，做成可以进入三维空间的角色。', image: publicAsset('unlock-real/prototype.jpg'), position: 'card--prototype' },
+  { title: '滑雪', caption: '8岁开始滑雪，熟练单板、双板，坚持热爱。', image: publicAsset('unlock-real/skiing.jpg'), position: 'card--ski' },
+  { title: '羽毛球', caption: '在球场上接住每一次来球。', image: publicAsset('unlock-real/badminton.jpg'), position: 'card--badminton' },
+  { title: '篮球', caption: '和队友一起跑动、传球、投篮。', image: publicAsset('unlock-real/basketball.jpg'), position: 'card--basketball' },
+  { title: '攀岩', caption: '沿着路线向上，试着突破自己的高度。', image: publicAsset('unlock-real/climbing.jpg'), position: 'card--climbing' },
+  { title: '卡丁车', caption: '坐进驾驶舱，体验赛道上的速度。', image: publicAsset('unlock-real/karting.jpg'), position: 'card--karting' },
+  { title: '高尔夫', caption: '在夜色中挥杆，感受击球的节奏。', image: publicAsset('unlock-real/golf.jpg'), position: 'card--golf' },
+  { title: '花样滑冰', caption: '在冰面上练习平衡与旋转。', image: publicAsset('unlock-real/figure-skating.jpg'), position: 'card--skating' },
+  { title: '保龄球', caption: '瞄准球道，等待球瓶倒下的瞬间。', image: publicAsset('unlock-real/bowling.jpg'), position: 'card--bowling' },
+  { title: '滑板', caption: '在路面上练习动作，享受滑行。', image: publicAsset('unlock-real/skateboarding.jpg'), position: 'card--skateboarding' },
 ];
 
 export default function UnlockRealRoom({ onClose }) {

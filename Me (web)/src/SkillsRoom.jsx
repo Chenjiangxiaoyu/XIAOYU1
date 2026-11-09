@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import gsap from 'gsap';
 import './SkillsRoom.css';
+import { publicAsset } from './utils/publicAsset.js';
 
 const CHIME_LAYOUT = [
   { label: '编程语言', x: 18, line: '22vh', tone: 'lilac', detailIndex: 0 },
@@ -104,7 +105,7 @@ export default function SkillsRoom({ room, onClose }) {
   }, []);
 
   return <section ref={rootRef} className="skills-room" aria-label="相关技能风铃房间">
-    <img className="skills-room-background" src="/skills-open-gallery.svg" alt="开放的手绘天空与透视地面" />
+    <img className="skills-room-background" src={publicAsset('skills-open-gallery.svg')} alt="开放的手绘天空与透视地面" />
     <div className="skills-sun-rays" aria-hidden="true" />
     <div className="skills-light-glow" aria-hidden="true" />
     <svg className="skills-breeze-lines" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">

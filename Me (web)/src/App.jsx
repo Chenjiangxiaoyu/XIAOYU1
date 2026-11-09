@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import GreetingAvatar from './components/canvas/GreetingAvatar.jsx';
 import * as THREE from 'three';
@@ -519,7 +519,9 @@ function Corridor({ onRoomOpen, activeRoom, onController, started, introReady, o
   });
 
   return <>
-    <GreetingAvatar resetKey={resetKey} visible={avatarVisible} approachTarget={avatarApproach} lookHint={lookHintRoom} onLookAtDoor={lookAtDoor} lookingDoorId={lookingDoorId} />
+    <Suspense fallback={null}>
+      <GreetingAvatar resetKey={resetKey} visible={avatarVisible} approachTarget={avatarApproach} lookHint={lookHintRoom} onLookAtDoor={lookAtDoor} lookingDoorId={lookingDoorId} />
+    </Suspense>
     <color attach="background" args={['#f4f4f2']} />
     <fog attach="fog" args={['#f4f4f2', 20, 68]} />
     <ambientLight intensity={2.5} />

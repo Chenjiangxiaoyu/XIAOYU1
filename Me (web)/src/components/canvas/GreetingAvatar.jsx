@@ -4,7 +4,7 @@ import { Html, useAnimations, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { clone } from 'three/addons/utils/SkeletonUtils.js';
 
-const MODEL_URL = '/models/pigtail-girl.glb';
+const MODEL_URL = `${import.meta.env.BASE_URL}models/pigtail-girl.glb`;
 const RESTING_HEIGHT = 1.0875;
 
 export default function GreetingAvatar({ resetKey = 0, visible = true, approachTarget = null, lookHint = null, onLookAtDoor, lookingDoorId = null }) {
