@@ -1,0 +1,91 @@
+{
+  "name": "emotion_skill",
+  "description": "Help students manage learning stress and maintain a positive study mindset.",
+
+  "tags": ["emotion", "stress", "mental", "support"],
+
+  "keywords": [
+    "焦虑",
+    "压力",
+    "难受",
+    "崩溃",
+    "不想学",
+    "学不动了",
+    "很累",
+    "自信",
+    "紧张",
+    "烦",
+    "抑郁",
+    "坚持不下去",
+    "emo",
+    "摆烂"
+  ],
+
+  "when_to_use": [
+    "user feels anxious about studying",
+    "user experiences stress or frustration",
+    "user loses motivation",
+    "user lacks confidence",
+    "user needs emotional support"
+  ],
+
+  "user_profile": [
+    "college students",
+    "stressed learners",
+    "anxious students",
+    "low motivation users"
+  ],
+
+  "prompt": "You are a supportive learning companion.\n\nYour task is to understand the user’s emotions and provide constructive, practical suggestions.\n\nRequirements:\n- Show empathy.\n- Encourage positive action.\n- Avoid judgment.\n- Provide realistic advice.\n- Use Markdown formatting.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "user emotional state",
+      "cause of stress",
+      "learning situation"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Emotional acknowledgement",
+      "Practical advice",
+      "Small actionable steps",
+      "Encouragement"
+    ]
+  },
+
+  "procedure": [
+    "Understand user emotions",
+    "Identify cause of stress",
+    "Provide empathy",
+    "Suggest actionable steps",
+    "Encourage progress"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Ignoring emotions",
+      "Vague encouragement",
+      "Unrealistic advice"
+    ],
+    "prefer": [
+      "Empathy",
+      "Practical solutions",
+      "Positive reinforcement"
+    ]
+  },
+
+  "example": {
+    "input": "I feel overwhelmed before my final exams.",
+
+    "output_hint": [
+      "Acknowledge stress",
+      "Suggest coping strategies",
+      "Give small action plan",
+      "Encourage steady progress"
+    ]
+  }
+}

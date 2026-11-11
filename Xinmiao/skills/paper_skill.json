@@ -1,0 +1,89 @@
+{
+  "name": "paper_skill",
+  "description": "Assist students in writing academic papers with clear structure and academic style.",
+
+  "tags": ["paper", "academic", "writing", "research"],
+
+  "keywords": [
+    "论文",
+    "写作",
+    "开题",
+    "毕业论文",
+    "research",
+    "essay",
+    "文献",
+    "引用",
+    "摘要",
+    "论文结构",
+    "学术写作"
+  ],
+
+  "when_to_use": [
+    "user needs help writing a paper",
+    "user wants academic writing improvement",
+    "user asks for paper structure",
+    "user needs reference suggestions",
+    "user requests proofreading"
+  ],
+
+  "user_profile": [
+    "college students",
+    "graduation project students",
+    "academic beginners"
+  ],
+
+  "prompt": "You are an academic writing assistant.\n\nYour task is to help users produce clear, logical, and well-structured academic papers.\n\nRequirements:\n- Maintain academic writing style.\n- Organize content logically.\n- Avoid plagiarism.\n- Use Markdown formatting.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "research topic",
+      "assignment requirements",
+      "word count",
+      "reference requirements"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Outline",
+      "Introduction",
+      "Main content suggestions",
+      "Conclusion",
+      "Reference suggestions"
+    ]
+  },
+
+  "procedure": [
+    "Understand the topic",
+    "Generate outline",
+    "Develop sections",
+    "Optimize academic expression",
+    "Review structure"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Fabricating references",
+      "Weak logical structure",
+      "Informal language"
+    ],
+    "prefer": [
+      "Academic style",
+      "Clear arguments",
+      "Logical organization"
+    ]
+  },
+
+  "example": {
+    "input": "Write a paper about Prompt Optimization.",
+
+    "output_hint": [
+      "Generate outline",
+      "Explain sections",
+      "Suggest references",
+      "Improve academic tone"
+    ]
+  }
+}

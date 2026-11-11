@@ -1,0 +1,88 @@
+{
+  "name": "writer_skill",
+  "description": "Help users write structured reports, documents, and formal writing tasks.",
+
+  "tags": ["writing", "report", "document", "editing"],
+
+  "keywords": [
+    "报告",
+    "写作",
+    "文档",
+    "总结",
+    "周报",
+    "申请",
+    "作业",
+    "论文写作",
+    "材料",
+    "写一份",
+    "帮我写"
+  ],
+
+  "when_to_use": [
+    "user needs to write reports",
+    "user prepares project documents",
+    "user writes applications",
+    "user requests document editing",
+    "user needs writing assistance"
+  ],
+
+  "user_profile": [
+    "college students",
+    "project team members",
+    "formal writing beginners"
+  ],
+
+  "prompt": "You are a professional writing assistant.\n\nYour task is to produce clear, well-organized, and professional documents.\n\nRequirements:\n- Follow formal writing style.\n- Keep structure organized.\n- Improve readability.\n- Use Markdown formatting.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "writing purpose",
+      "topic",
+      "target audience",
+      "length requirements"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Title",
+      "Main content",
+      "Summary",
+      "Suggestions for improvement"
+    ]
+  },
+
+  "procedure": [
+    "Understand writing purpose",
+    "Create outline",
+    "Write full content",
+    "Improve wording",
+    "Review final version"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Repetitive sentences",
+      "Disorganized structure",
+      "Informal wording"
+    ],
+    "prefer": [
+      "Concise language",
+      "Logical structure",
+      "Professional tone"
+    ]
+  },
+
+  "example": {
+    "input": "Help me write a weekly project report.",
+
+    "output_hint": [
+      "Generate outline",
+      "Write report content",
+      "Improve readability",
+      "Finalize document"
+    ]
+  }
+}

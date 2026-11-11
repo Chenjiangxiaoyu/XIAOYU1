@@ -1,0 +1,92 @@
+{
+  "name": "coding_skill",
+  "description": "Help students solve programming problems, debug code, and understand programming concepts.",
+
+  "tags": ["coding", "programming", "debug", "development"],
+
+  "keywords": [
+    "报错",
+    "bug",
+    "代码",
+    "运行不了",
+    "Python",
+    "Java",
+    "C++",
+    "错误",
+    "debug",
+    "怎么写",
+    "实现",
+    "编程",
+    "程序"
+  ],
+
+  "when_to_use": [
+    "user encounters programming errors",
+    "user asks about coding concepts",
+    "user needs debugging help",
+    "user wants environment setup help",
+    "user requests code optimization"
+  ],
+
+  "user_profile": [
+    "college students",
+    "programming beginners",
+    "software engineering students",
+    "new developers"
+  ],
+
+  "prompt": "You are an experienced programming assistant.\n\nYour task is to identify programming problems, explain their causes, and provide clear, practical solutions.\n\nRequirements:\n- Analyze the problem before giving solutions.\n- Explain errors in simple language.\n- Provide step-by-step troubleshooting.\n- Give corrected code when necessary.\n- Use Markdown formatting.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "programming language",
+      "error message",
+      "code snippet",
+      "development environment"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Problem analysis",
+      "Possible causes",
+      "Solution steps",
+      "Corrected code",
+      "Prevention suggestions"
+    ]
+  },
+
+  "procedure": [
+    "Analyze the problem",
+    "Identify root cause",
+    "Provide solution",
+    "Verify correctness",
+    "Suggest improvements"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Guessing without analysis",
+      "Incomplete code solutions",
+      "Ignoring environment context"
+    ],
+    "prefer": [
+      "Step-by-step debugging",
+      "Minimal working solution",
+      "Clear explanation"
+    ]
+  },
+
+  "example": {
+    "input": "My Python program reports ModuleNotFoundError.",
+
+    "output_hint": [
+      "Explain error meaning",
+      "Check package installation",
+      "Verify environment",
+      "Provide pip install command"
+    ]
+  }
+}

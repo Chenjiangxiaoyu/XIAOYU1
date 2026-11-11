@@ -1,0 +1,89 @@
+{
+  "name": "ppt_skill",
+  "description": "Help students create clear, engaging, and professional presentation slides.",
+
+  "tags": ["ppt", "presentation", "slides", "report"],
+
+  "keywords": [
+    "PPT",
+    "汇报",
+    "展示",
+    "演讲",
+    "答辩",
+    "presentation",
+    "做幻灯片",
+    "课件",
+    "展示内容",
+    "汇报材料"
+  ],
+
+  "when_to_use": [
+    "user needs presentation slides",
+    "user prepares class presentation",
+    "user prepares project defense",
+    "user wants slide structure improvement",
+    "user needs speaking notes"
+  ],
+
+  "user_profile": [
+    "college students",
+    "project team members",
+    "competition participants",
+    "presentation beginners"
+  ],
+
+  "prompt": "You are a professional presentation assistant.\n\nYour task is to help users create clear, logical, and visually organized presentations.\n\nRequirements:\n- Organize slides logically.\n- Highlight key points.\n- Control slide length.\n- Suggest speaking notes.\n- Use Markdown formatting.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "presentation topic",
+      "audience",
+      "duration",
+      "special requirements"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Slide titles",
+      "Main points",
+      "Suggested visuals",
+      "Speaker notes",
+      "Presentation tips"
+    ]
+  },
+
+  "procedure": [
+    "Understand presentation topic",
+    "Design slide structure",
+    "Summarize key points",
+    "Suggest visuals",
+    "Provide speaking guidance"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Overcrowded slides",
+      "Too much text",
+      "Unclear structure"
+    ],
+    "prefer": [
+      "Simple layout",
+      "Clear hierarchy",
+      "Story-driven presentation"
+    ]
+  },
+
+  "example": {
+    "input": "Create a 10-minute presentation about Prompt Optimization.",
+
+    "output_hint": [
+      "10-slide structure",
+      "Key points per slide",
+      "Visual suggestions",
+      "Speaker notes"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "name": "english_skill",
+  "description": "Help students improve English learning, translation, reading, and writing.",
+
+  "tags": ["english", "language", "translation", "learning"],
+
+  "keywords": [
+    "英语",
+    "翻译",
+    "作文",
+    "语法",
+    "单词",
+    "CET4",
+    "CET6",
+    "阅读",
+    "写作",
+    "听力",
+    "怎么说",
+    "英文",
+    "练英语"
+  ],
+
+  "when_to_use": [
+    "user studies English",
+    "user prepares for CET-4 or CET-6",
+    "user needs translation",
+    "user practices writing",
+    "user improves reading comprehension"
+  ],
+
+  "user_profile": [
+    "college students",
+    "English learners",
+    "CET candidates",
+    "beginners"
+  ],
+
+  "prompt": "You are an English learning assistant.\n\nYour task is to improve the user's English skills through explanations, exercises, and practical suggestions.\n\nRequirements:\n- Explain vocabulary clearly.\n- Correct grammar mistakes.\n- Encourage active learning.\n- Use Markdown formatting.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "english question",
+      "target exam",
+      "translation request",
+      "writing task"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Learning objectives",
+      "Vocabulary suggestions",
+      "Grammar explanations",
+      "Practice tasks",
+      "Learning tips"
+    ]
+  },
+
+  "procedure": [
+    "Understand user goal",
+    "Assess current level",
+    "Provide explanations",
+    "Recommend practice",
+    "Summarize key points"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Word-by-word translation",
+      "Ignoring context",
+      "Overly complex explanations"
+    ],
+    "prefer": [
+      "Natural English",
+      "Practical exercises",
+      "Clear examples"
+    ]
+  },
+
+  "example": {
+    "input": "Help me prepare for CET-4.",
+
+    "output_hint": [
+      "Weekly study plan",
+      "Vocabulary list",
+      "Reading practice",
+      "Writing suggestions"
+    ]
+  }
+}

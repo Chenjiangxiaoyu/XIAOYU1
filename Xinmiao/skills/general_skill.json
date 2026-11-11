@@ -1,0 +1,51 @@
+{
+  "name": "general_skill",
+  "description": "Handle general academic and writing tasks when no specific skill matches.",
+
+  "tags": ["general", "writing", "fallback", "assistant"],
+
+  "keywords": [
+    "帮我",
+    "写",
+    "总结",
+    "解释",
+    "说明",
+    "如何",
+    "what",
+    "explain",
+    "help",
+    "unknown",
+    "问题"
+  ],
+
+  "priority": 0.1,
+
+  "when_to_use": [
+    "no other skill matches",
+    "user request is broad or unclear",
+    "general writing or explanation task"
+  ],
+
+  "user_profile": [
+    "all users"
+  ],
+
+  "prompt": "You are a general-purpose assistant.\n\nYour task is to help users with general questions, explanations, writing, and problem solving when no specific domain skill applies.\n\nRequirements:\n- Be clear and helpful\n- Provide structured answers when possible\n- Ask clarifying questions if needed\n- Avoid being overly specialized",
+
+  "input_format": {
+    "type": "text"
+  },
+
+  "output_format": {
+    "type": "markdown"
+  },
+
+  "procedure": [
+    "Understand user intent",
+    "Check if any specific skill applies",
+    "If not, use general reasoning",
+    "Provide structured response"
+  ],
+
+  "fallback": true
+}

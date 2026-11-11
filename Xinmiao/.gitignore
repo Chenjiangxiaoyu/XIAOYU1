@@ -1,0 +1,5 @@
+.env
+history.json
+.gradio/
+__pycache__/
+*.py[cod]

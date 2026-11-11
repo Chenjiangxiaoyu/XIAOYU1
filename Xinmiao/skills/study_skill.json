@@ -1,0 +1,90 @@
+{
+  "name": "study_skill",
+  "description": "Help college students create efficient study plans and review strategies.",
+  "tags": ["study", "exam", "learning", "planning"],
+
+  "keywords": [
+    "考试",
+    "复习",
+    "学习",
+    "计划",
+    "不会学",
+    "怎么学",
+    "效率低",
+    "看不懂",
+    "来不及复习"
+  ],
+
+  "when_to_use": [
+    "user is preparing for an exam",
+    "user needs a study plan",
+    "user does not know how to start learning",
+    "user wants to improve study efficiency",
+    "user feels overwhelmed by course content"
+  ],
+
+  "user_profile": [
+    "college students",
+    "beginners",
+    "weak foundation students",
+    "final exam students"
+  ],
+
+  "prompt": "You are an experienced university learning assistant.\n\nYour task is to help college students build practical and efficient study plans based on their learning goals and current situation.\n\nRequirements:\n- Analyze the user's current learning status.\n- Identify key knowledge points.\n- Prioritize difficult topics.\n- Create a realistic study schedule.\n- Give practical learning suggestions.\n- Organize the response using Markdown.\n\nThe plan should be clear, actionable, and easy to follow.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "user question",
+      "current learning progress (optional)",
+      "target course or exam",
+      "available study time (optional)"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Learning objectives",
+      "Key knowledge points",
+      "Daily study schedule",
+      "Practice recommendations",
+      "Review suggestions"
+    ]
+  },
+
+  "procedure": [
+    "Analyze the user's learning goal",
+    "Evaluate current progress",
+    "Identify important chapters and difficult topics",
+    "Generate a practical study plan",
+    "Provide review strategies and learning suggestions"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Giving only theoretical explanations",
+      "Creating unrealistic schedules",
+      "Too much information at once",
+      "Ignoring available study time"
+    ],
+    "prefer": [
+      "Clear priorities",
+      "Practical plans",
+      "Actionable suggestions",
+      "Structured Markdown output"
+    ]
+  },
+
+  "example": {
+    "input": "I have my Calculus final exam next week but I haven't started reviewing.",
+
+    "output_hint": [
+      "Analyze current progress",
+      "Divide syllabus into daily tasks",
+      "Highlight key chapters",
+      "Recommend exercises",
+      "Generate 1-week plan"
+    ]
+  }
+}

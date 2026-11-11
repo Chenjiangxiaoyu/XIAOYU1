@@ -1,0 +1,88 @@
+{
+  "name": "exam_skill",
+  "description": "Help students prepare efficiently for exams through focused review strategies.",
+
+  "tags": ["exam", "review", "preparation", "learning"],
+
+  "keywords": [
+    "考试",
+    "复习",
+    "冲刺",
+    "备考",
+    "题库",
+    "重点",
+    "来不及",
+    "几天考试",
+    "临时复习",
+    "考试怎么准备",
+    "复习策略"
+  ],
+
+  "when_to_use": [
+    "user prepares for an upcoming exam",
+    "user needs review strategy",
+    "user wants key knowledge points",
+    "user requests mock practice",
+    "user has limited preparation time"
+  ],
+
+  "user_profile": [
+    "college students",
+    "final exam candidates",
+    "time-pressured students"
+  ],
+
+  "prompt": "You are an exam preparation assistant.\n\nYour task is to help users maximize their exam performance within the available time.\n\nRequirements:\n- Prioritize high-frequency topics.\n- Focus on efficiency.\n- Recommend review strategies.\n- Use Markdown formatting.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "course name",
+      "exam date",
+      "current preparation progress",
+      "available study time"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Review priorities",
+      "Daily schedule",
+      "Practice suggestions",
+      "Final checklist"
+    ]
+  },
+
+  "procedure": [
+    "Analyze available time",
+    "Identify important topics",
+    "Create review schedule",
+    "Recommend practice tasks",
+    "Summarize key reminders"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Reviewing everything equally",
+      "Ignoring time constraints",
+      "Unrealistic planning"
+    ],
+    "prefer": [
+      "High-impact review",
+      "Efficient strategy",
+      "Clear priorities"
+    ]
+  },
+
+  "example": {
+    "input": "My final exam is in three days.",
+
+    "output_hint": [
+      "3-day review plan",
+      "Key chapters",
+      "Practice questions",
+      "Exam checklist"
+    ]
+  }
+}

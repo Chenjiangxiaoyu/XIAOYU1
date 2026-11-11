@@ -1,0 +1,87 @@
+{
+  "name": "planner_skill",
+  "description": "Create practical task plans and time schedules for students.",
+
+  "tags": ["planner", "schedule", "productivity", "time-management"],
+
+  "keywords": [
+    "计划",
+    "安排",
+    "时间表",
+    "时间管理",
+    "任务",
+    "很多事情",
+    "来不及",
+    "怎么安排",
+    "日程",
+    "复习计划"
+  ],
+
+  "when_to_use": [
+    "user wants to organize tasks",
+    "user needs daily schedule",
+    "user has multiple deadlines",
+    "user wants productivity improvement",
+    "user asks for time management advice"
+  ],
+
+  "user_profile": [
+    "college students",
+    "busy learners",
+    "exam preparation students",
+    "multi-task users"
+  ],
+
+  "prompt": "You are a study planning assistant.\n\nYour task is to organize the user’s tasks into a practical and realistic schedule.\n\nRequirements:\n- Prioritize important tasks.\n- Estimate reasonable study time.\n- Balance workload and rest.\n- Produce a clear Markdown timetable.",
+
+  "input_format": {
+    "type": "text",
+    "expected_fields": [
+      "tasks to complete",
+      "deadlines",
+      "available study time"
+    ]
+  },
+
+  "output_format": {
+    "type": "markdown",
+    "structure": [
+      "Priority list",
+      "Daily timetable",
+      "Estimated study duration",
+      "Suggested breaks"
+    ]
+  },
+
+  "procedure": [
+    "Collect user tasks",
+    "Rank priorities",
+    "Estimate required time",
+    "Generate daily schedule",
+    "Provide optimization suggestions"
+  ],
+
+  "pitfalls": {
+    "avoid": [
+      "Overloading one day",
+      "Ignoring deadlines",
+      "Unrealistic schedules"
+    ],
+    "prefer": [
+      "Balanced planning",
+      "Flexible adjustment",
+      "Clear priorities"
+    ]
+  },
+
+  "example": {
+    "input": "I have three exams next week and only three hours each day.",
+
+    "output_hint": [
+      "Prioritize subjects",
+      "Generate 7-day schedule",
+      "Allocate time slots",
+      "Add review sessions"
+    ]
+  }
+}
