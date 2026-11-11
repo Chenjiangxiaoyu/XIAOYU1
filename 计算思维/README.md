@@ -1,4 +1,4 @@
-# Xinmiao 多技能 AI 系统
+# 计算思维 多技能 AI Prompt 自动构建系统
 
 基于 Gradio 的多技能 AI 助手。系统根据用户输入进行意图识别、检索匹配技能、重写提示词，并调用 OpenAI 或 DeepSeek 模型生成回答。界面还提供本地历史记录查询和统计功能。
 
@@ -7,7 +7,7 @@
 需要 Python 3.10 或更新版本。
 
 ```powershell
-cd Xinmiao
+cd 计算思维
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
