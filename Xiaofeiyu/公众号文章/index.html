@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>图文教程文字稿_排版_石墨极简风_已配图 · 公众号排版预览</title>
+<style>
+  body{margin:0;background:#eef0f2;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;-webkit-text-size-adjust:100%;}
+  .gzh-toolbar{position:fixed;top:0;left:0;right:0;height:54px;background:#ffffff;box-shadow:0 1px 10px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;padding:0 16px;z-index:99;}
+  .gzh-hint{font-size:13px;color:#6b7280;line-height:1.4;}
+  .gzh-hint b{color:#111827;}
+  .gzh-copy{background:#059669;color:#fff;border:0;border-radius:9px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(5,150,105,.28);white-space:nowrap;transition:transform .08s,background .15s;}
+  .gzh-copy:hover{background:#047857;}
+  .gzh-copy:active{transform:translateY(1px);}
+  .gzh-toast{position:fixed;top:66px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s;z-index:100;box-shadow:0 6px 20px rgba(0,0,0,.25);max-width:88vw;text-align:center;}
+  .gzh-toast.show{opacity:1;}
+  .gzh-stage{max-width:700px;margin:78px auto 64px;padding:0 8px;}
+  @media(max-width:520px){.gzh-hint{max-width:150px;}}
+</style>
+</head>
+<body>
+<div class="gzh-toolbar">
+  <span class="gzh-hint">👇 下方是排版效果 · 点右侧 <b>复制</b> 直接粘到公众号</span>
+  <button class="gzh-copy" id="gzhCopyBtn" onclick="gzhCopy()">📋 复制到公众号</button>
+</div>
+<div class="gzh-toast" id="gzhToast"></div>
+<div class="gzh-stage">
+  <div id="gzh-content">
+<section style="max-width:677px;margin:0 auto;background:#FFFFFF;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#52525B;line-height:1.8;letter-spacing:0.3px;overflow-x:hidden;">
+
+  <section style="margin:10px 10px 40px;padding:32px 24px 24px;border-top:1px solid #E4E4E7;border-bottom:1px solid #E4E4E7;background:#FFFFFF;">
+  <p style="font-size:24px;font-weight:700;color:#27272A;margin:0 0 8px;line-height:1.7;letter-spacing:0.5px;">
+    <span leaf="">截止时间</span>
+    <span style="border-bottom:2px solid #52525B;"><span leaf="">不再沉底</span></span>
+    <span leaf="">，让待办浮上桌面</span>
+  </p>
+</section>
+<section style="padding:0 10px;"><section style="border:1px solid #E4E4E7;padding:4px;margin:0 10px 8px;">
+  <section style="margin:0;overflow:hidden;background:#FFFFFF;text-align:center;">
+    <span leaf=""><img src="媒体/01-封面.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="font-size:12px;color:#A1A1AA;text-align:center;margin:0 10px 28px;letter-spacing:0.5px;">
+  <span leaf="">— 真实桌面上的邮件提醒</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">一封邮件你可能只花十秒就读完，但它里面那句“请在周五前提交”，要靠什么记到周五？我的邮件任务越来越多，最怕的不是收不到邮件，而是明明看过，却把</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">藏在正文里的截止时间</span></span><span leaf="">忘了。新邮件一多，重要的那封很快就沉下去。所以我做了“邮件小肥鱼”：让邮件的行动要求从收件箱里浮到桌面上。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">先给你看结果：我电脑桌面上有一个紫色邮件角标。需要看邮件时点开，不需要时收起；当有新消息或识别到临近的</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">截止时间</span></span><span leaf="">，它会闪动并在旁边弹出提示。下面展示的，都是我正在使用的 Windows 桌面版。</span>
+</p>
+<section style="background:#FFFFFF;border-radius:0px;padding:6px;border:1px solid #E4E4E7;margin-bottom:8px;">
+  <section style="margin:0;border-radius:0px;overflow:hidden;">
+    <span leaf=""><img src="媒体/02-桌面入口.gif" style="max-width:100%;max-height:410px;width:auto;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="text-align:center;margin:0 0 24px;">
+  <span style="display:inline-block;background:transparent;color:#52525B;border:1px solid #52525B;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
+  <span style="font-size:12px;color:#9CA3AF;"><span leaf="">动图 1 · 桌面入口与提醒气泡</span></span>
+</p></section>
+<section style="padding:0 10px 40px;">
+  <p style="font-size:11px;color:#A1A1AA;margin:0 0 16px;letter-spacing:2px;">
+    <span leaf="">本文看点</span>
+  </p>
+  <section style="display:flex;justify-content:space-between;">
+    <section style="flex:1;background:#FAFAFA;border-top:1px solid #E4E4E7;padding:18px 12px 16px;margin-right:8px;">
+      <p style="font-size:11px;color:#A1A1AA;font-weight:500;margin:0 0 8px;letter-spacing:1px;"><span leaf="">01</span></p>
+      <p style="font-size:13px;font-weight:700;color:#27272A;margin:0;line-height:1.5;"><span leaf="">邮件变待办</span></p>
+    </section>
+    <section style="flex:1;background:#FAFAFA;border-top:1px solid #E4E4E7;padding:18px 12px 16px;margin-right:8px;">
+      <p style="font-size:11px;color:#A1A1AA;font-weight:500;margin:0 0 8px;letter-spacing:1px;"><span leaf="">02</span></p>
+      <p style="font-size:13px;font-weight:700;color:#27272A;margin:0;line-height:1.5;"><span leaf="">提醒与规则</span></p>
+    </section>
+    <section style="flex:1;background:#FAFAFA;border-top:1px solid #E4E4E7;padding:18px 12px 16px;">
+      <p style="font-size:11px;color:#A1A1AA;font-weight:500;margin:0 0 8px;letter-spacing:1px;"><span leaf="">03</span></p>
+      <p style="font-size:13px;font-weight:700;color:#27272A;margin:0;line-height:1.5;"><span leaf="">桌面对话</span></p>
+    </section>
+  </section>
+</section>
+<section style="margin-top:16px;margin-bottom:32px;padding:0 10px;">
+  <section style="position:relative;padding-bottom:20px;border-bottom:1px solid #E4E4E7;">
+    <p style="font-size:48px;font-weight:900;color:#E4E4E7;margin:0;line-height:1;letter-spacing:-2px;">
+      <span leaf="">01</span>
+    </p>
+    <section style="margin-top:-8px;">
+      <p style="font-size:10px;color:#A1A1AA;font-weight:500;letter-spacing:3px;margin:0 0 6px;text-transform:uppercase;">
+        <span leaf="">MAIL</span>
+      </p>
+      <h3 style="font-size:20px;font-weight:800;color:#27272A;margin:0;letter-spacing:0.5px;line-height:1.4;">
+        <span leaf="">一、这封邮件，究竟要我做什么？</span>
+      </h3>
+    </section>
+  </section>
+
+  <section style="border:1px solid #E4E4E7;padding:4px;margin:0 10px 8px;">
+  <section style="margin:0;overflow:hidden;background:#FFFFFF;text-align:center;">
+    <span leaf=""><img src="媒体/03-文件箱.jpg" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="font-size:12px;color:#A1A1AA;text-align:center;margin:0 10px 28px;letter-spacing:0.5px;">
+  <span leaf="">— 顶部连接状态</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">第一步，点击桌面的悬浮图标打开“文件箱”，看顶部的连接状态；需要立即同步时，点刷新按钮。小肥鱼通过我授权的 Agent Mail 读取最近邮件。选一封邮件，左边能看到发件人和主题；点进去后，长正文被整理成摘要。如果邮件提出具体工作，界面会列出</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">待办</span></span><span leaf="">；如果能识别日期，则把截止时间和优先级放在明显的位置。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">比如邮件里同时说“补交通票据”和“写费用说明”，我需要记住的是两个动作，而不只是“有一封报销邮件”。没有写清日期的邮件会显示“未识别”或“待确认”，不会为了显得聪明就编出一个期限。</span>
+</p>
+<section style="border:1px solid #E4E4E7;padding:4px;margin:0 10px 8px;">
+  <section style="margin:0;overflow:hidden;background:#FFFFFF;text-align:center;">
+    <span leaf=""><img src="媒体/04-邮件待办.jpg" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="font-size:12px;color:#A1A1AA;text-align:center;margin:0 10px 28px;letter-spacing:0.5px;">
+  <span leaf="">— 邮件里的待办与截止时间</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">这一步的分工是：Agent Mail 提供</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">真实邮件</span></span><span leaf="">；程序用 agently-cli 读取；DeepSeek Harness（DSH）尝试理解摘要、任务和日期；PySide6 把结果画成桌面小窗。它们各做一件事，少了任何一层，界面和智能分析的表现都会不同。</span>
+</p>
+
+</section>
+<section style="padding:0 10px;">
+  <section style="height:1px;background:#E4E4E7;margin:0;">
+    <span leaf=""><br></span>
+  </section>
+</section>
+<section style="margin-top:56px;margin-bottom:32px;padding:0 10px;">
+  <section style="position:relative;padding-bottom:20px;border-bottom:1px solid #E4E4E7;">
+    <p style="font-size:48px;font-weight:900;color:#E4E4E7;margin:0;line-height:1;letter-spacing:-2px;">
+      <span leaf="">02</span>
+    </p>
+    <section style="margin-top:-8px;">
+      <p style="font-size:10px;color:#A1A1AA;font-weight:500;letter-spacing:3px;margin:0 0 6px;text-transform:uppercase;">
+        <span leaf="">ACTIONS</span>
+      </p>
+      <h3 style="font-size:20px;font-weight:800;color:#27272A;margin:0;letter-spacing:0.5px;line-height:1.4;">
+        <span leaf="">二、看过之后，怎么不让它再次沉底？</span>
+      </h3>
+    </section>
+  </section>
+
+  <section style="background:#FFFFFF;border-radius:0px;padding:6px;border:1px solid #E4E4E7;margin-bottom:8px;">
+  <section style="margin:0;border-radius:0px;overflow:hidden;">
+    <span leaf=""><img src="媒体/05-右键与收藏.gif" style="max-width:100%;max-height:410px;width:auto;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="text-align:center;margin:0 0 24px;">
+  <span style="display:inline-block;background:transparent;color:#52525B;border:1px solid #52525B;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
+  <span style="font-size:12px;color:#9CA3AF;"><span leaf="">动图 2 · 邮件操作与收藏</span></span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">第二步，在邮件列表里右键目标邮件，打开操作菜单。要反复看的邮件可以收藏；特别在意某个发件人、域名或主题词，可以设为重点关注；不想占据主列表的邮件，可以屏蔽或拉黑。收藏和重点不会改变邮件原来在主列表的位置，屏蔽和拉黑则让它从主列表隐藏。取消收藏要到收藏页操作，避免在主列表里误点。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">“移到回收站”指</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">本地隐藏</span></span><span leaf="">，并没有调用服务端的永久删除。需要找回时，可以打开“回收站”页恢复这封邮件。这样误点后还有改回来的机会，邮箱里的原邮件也不会被程序删掉。</span>
+</p>
+<section style="border:1px solid #E4E4E7;padding:4px;margin:0 10px 8px;">
+  <section style="margin:0;overflow:hidden;background:#FFFFFF;text-align:center;">
+    <span leaf=""><img src="媒体/07-三种规则.jpg" style="max-width:100%;max-height:410px;width:auto;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="font-size:12px;color:#A1A1AA;text-align:center;margin:0 10px 28px;letter-spacing:0.5px;">
+  <span leaf="">— 发件人、域名、主题关键词规则</span>
+</p>
+
+</section>
+<section style="padding:0 10px;">
+  <section style="height:1px;background:#E4E4E7;margin:0;">
+    <span leaf=""><br></span>
+  </section>
+</section>
+<section style="margin-top:56px;margin-bottom:32px;padding:0 10px;">
+  <section style="position:relative;padding-bottom:20px;border-bottom:1px solid #E4E4E7;">
+    <p style="font-size:48px;font-weight:900;color:#E4E4E7;margin:0;line-height:1;letter-spacing:-2px;">
+      <span leaf="">03</span>
+    </p>
+    <section style="margin-top:-8px;">
+      <p style="font-size:10px;color:#A1A1AA;font-weight:500;letter-spacing:3px;margin:0 0 6px;text-transform:uppercase;">
+        <span leaf="">REMIND</span>
+      </p>
+      <h3 style="font-size:20px;font-weight:800;color:#27272A;margin:0;letter-spacing:0.5px;line-height:1.4;">
+        <span leaf="">截止前它会不会再叫我一次？</span>
+      </h3>
+    </section>
+  </section>
+
+  <section style="background:#FFFFFF;border-radius:0px;padding:6px;border:1px solid #E4E4E7;margin-bottom:8px;">
+  <section style="margin:0;border-radius:0px;overflow:hidden;">
+    <span leaf=""><img src="媒体/08-自动提醒.gif" style="max-width:100%;max-height:410px;width:auto;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="text-align:center;margin:0 0 24px;">
+  <span style="display:inline-block;background:transparent;color:#52525B;border:1px solid #52525B;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
+  <span style="font-size:12px;color:#9CA3AF;"><span leaf="">动图 3 · 截止前自动提醒</span></span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">第三步，切到“提醒”页查看被提醒的邮件。我做这个项目，核心就是不想靠自己每天翻邮件找期限。自动提醒针对识别出明确</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">截止时间</span></span><span leaf="">的邮件：分析出结果时提醒一次，距离截止还剩 1 天、2 小时、1 小时时再分别提醒。提醒记录会进入“消息”页，回头还可以找。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">手动提醒由我自己设置：右键邮件选“加入／设置提醒”，输入每隔多少分钟提醒一次。没有明确</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">截止时间</span></span><span leaf="">的邮件也能设置。提醒页会标明“自动提醒”“自动＋手动提醒”或“仅手动提醒”，一眼就能区分来源。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">不想再被催时，在邮件上右键打开“取消提醒…”：选“取消手动提醒”，只停止手动重复提醒，原有的自动截止提醒继续；选“取消自动和手动提醒”，两种都停止。如果这封邮件只有手动提醒，就用“取消手动提醒”。取消自动提醒后，还可以在邮件右键菜单里选“恢复自动提醒”。没有写清期限的邮件会标为“待确认”，日期仍要自己核对。</span>
+</p>
+<section style="border:1px solid #E4E4E7;padding:4px;margin:0 10px 8px;">
+  <section style="margin:0;overflow:hidden;background:#FFFFFF;text-align:center;">
+    <span leaf=""><img src="媒体/09-提醒与消息.jpg" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="font-size:12px;color:#A1A1AA;text-align:center;margin:0 10px 28px;letter-spacing:0.5px;">
+  <span leaf="">— 提醒页与消息记录</span>
+</p>
+
+</section>
+<section style="padding:0 10px;">
+  <section style="height:1px;background:#E4E4E7;margin:0;">
+    <span leaf=""><br></span>
+  </section>
+</section>
+<section style="margin-top:56px;margin-bottom:32px;padding:0 10px;">
+  <section style="position:relative;padding-bottom:20px;border-bottom:1px solid #E4E4E7;">
+    <p style="font-size:48px;font-weight:900;color:#E4E4E7;margin:0;line-height:1;letter-spacing:-2px;">
+      <span leaf="">04</span>
+    </p>
+    <section style="margin-top:-8px;">
+      <p style="font-size:10px;color:#A1A1AA;font-weight:500;letter-spacing:3px;margin:0 0 6px;text-transform:uppercase;">
+        <span leaf="">CHAT</span>
+      </p>
+      <h3 style="font-size:20px;font-weight:800;color:#27272A;margin:0;letter-spacing:0.5px;line-height:1.4;">
+        <span leaf="">四、它还能聊天，也能帮我改程序</span>
+      </h3>
+    </section>
+  </section>
+
+  <section style="border:1px solid #E4E4E7;padding:4px;margin:0 10px 8px;">
+  <section style="margin:0;overflow:hidden;background:#FFFFFF;text-align:center;">
+    <span leaf=""><img src="媒体/10-对话页.png" style="max-width:100%;max-height:410px;width:auto;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="font-size:12px;color:#A1A1AA;text-align:center;margin:0 10px 28px;letter-spacing:0.5px;">
+  <span leaf="">— 用户与助手的左右气泡对话</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">第四步，点开“对话”，把邮件摘要或遇到的问题输入底部聊天框，问“这几件事先做哪件”“今天能怎么安排”。发送后，顶部会显示“对方正在输入…”，回复出现在左侧。我可以让它把一封邮件拆成几件能动手的小事，排出今天先做什么、哪些需要等别人确认；做完一部分，再回来告诉它进度，接着商量</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">下一步</span></span><span leaf="">。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">赶上几封邮件一起催、脑子有点乱的时候，我也会先和它聊两句。它能听我把压力说出来，帮我重新梳理事情的轻重缓急，或者陪我聊聊今天的进展。桌面上留着这个入口，就像有个随时能叫出来的小伙伴：需要处理任务时一起想办法，想喘口气时也能说句话。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">更让我意外的是，这个聊天框接入的是本机的 </span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">DeepSeek Harness</span></span><span leaf="">（DSH）。在我这台保留项目源码的电脑上，只要 DSH 工具能运行、工作目录有权限，我可以直接说“把聊天气泡改成圆角”或“调整窗口按钮”。它能查看项目文件、修改 PySide6 界面代码；遇到需要审批的操作，窗口会让我决定是否允许。我再检查改动，重启程序看实际效果。</span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">这项改程序的能力依赖本机源码、DSH 的登录和运行环境，以及相应的文件权限。普通安装包能否做到同样的事还需要单独验证；它在我这里真正有用的，是把“想到一个改进”到“看到窗口变化”的距离缩短了。</span>
+</p>
+<section style="background:#FFFFFF;border-radius:0px;padding:6px;border:1px solid #E4E4E7;margin-bottom:8px;">
+  <section style="margin:0;border-radius:0px;overflow:hidden;">
+    <span leaf=""><img src="媒体/11-真实对话.gif" style="max-width:100%;max-height:410px;width:auto;height:auto;display:block;margin:0 auto;"></span>
+  </section>
+</section>
+<p style="text-align:center;margin:0 0 24px;">
+  <span style="display:inline-block;background:transparent;color:#52525B;border:1px solid #52525B;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
+  <span style="font-size:12px;color:#9CA3AF;"><span leaf="">动图 4 · 真实 DSH 对话</span></span>
+</p>
+<p style="margin-bottom:22px;font-size:15px;line-height:1.8;text-align:justify;color:#52525B;letter-spacing:0.3px;">
+  <span leaf="">最后说一句：这个项目已经能在我的电脑上连接真实邮箱并运行。Windows 安装包目前仍是</span><span style="border-bottom:2px solid #52525B;font-weight:600;color:#27272A;"><span leaf="">预览包</span></span><span leaf="">，全新电脑上的首次授权与安装流程还在继续验收。我会继续把这些步骤补齐，让更多人能直接用上它。</span>
+</p>
+
+</section>
+<section style="padding:0 10px;">
+  <section style="text-align:center;margin:0 0 36px;">
+    <section style="display:flex;align-items:center;justify-content:center;">
+      <span style="height:1px;width:48px;background:#E4E4E7;margin-right:16px;"><span leaf=""><br></span></span>
+      <span style="font-size:10px;color:#A1A1AA;letter-spacing:4px;font-weight:500;"><span leaf="">END</span></span>
+      <span style="height:1px;width:48px;background:#E4E4E7;margin-left:16px;"><span leaf=""><br></span></span>
+    </section>
+  </section>
+</section>
+<section style="padding:0 10px 24px;">
+  <section style="border-top:1px solid #E4E4E7;padding-top:28px;">
+    <p style="margin-bottom:16px;font-size:15px;line-height:1.8;color:#52525B;text-align:justify;">
+      <span leaf="">我是 翊只小小鱼，全栈软件开发小作家。</span>
+    </p>
+    <p style="margin-bottom:0;font-size:15px;line-height:1.8;color:#52525B;text-align:justify;">
+      <span leaf="">如果你觉得今天这篇有收获，欢迎</span>
+      <strong style="color:#27272A;"><span leaf="">点赞、在看、转发</span></strong>
+      <span leaf="">三连，我们下篇见。</span>
+    </p>
+  </section>
+</section>
+
+</section>
+  </div>
+</div>
+<script>
+  function gzhShowToast(msg){
+    var t=document.getElementById('gzhToast');
+    t.textContent=msg;t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer=setTimeout(function(){t.classList.remove('show');},2800);
+  }
+  function gzhCopy(){
+    var el=document.getElementById('gzh-content');
+    var html=el.innerHTML;
+    var text=el.innerText;
+    var btn=document.getElementById('gzhCopyBtn');
+    var ok=false;
+    var handler=null;
+    var ta=document.createElement('textarea');
+    try{
+      // Write the original HTML directly to avoid browser range serialization
+      // injecting values such as text-align:start into the copied markup.
+      handler=function(e){
+        if(!e.clipboardData)return;
+        e.clipboardData.setData('text/html',html);
+        e.clipboardData.setData('text/plain',text);
+        e.preventDefault();
+      };
+      document.addEventListener('copy',handler,{once:true});
+      ta.value=text;
+      ta.setAttribute('readonly','');
+      ta.style.position='fixed';
+      ta.style.left='-9999px';
+      ta.style.top='0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      ok=document.execCommand('copy');
+    }catch(e){
+      ok=false;
+    }finally{
+      if(ta.parentNode)ta.parentNode.removeChild(ta);
+      if(handler)document.removeEventListener('copy',handler);
+    }
+    if(ok){
+      gzhShowToast('✅ 已复制！去公众号编辑器按 Ctrl/⌘+V 粘贴即可');
+      var old=btn.textContent;btn.textContent='✅ 已复制';
+      setTimeout(function(){btn.textContent=old;},2200);
+    }else{
+      gzhShowToast('⚠ 浏览器阻止复制，请换 Edge/Chrome 后重试');
+    }
+  }
+</script>
+</body>
+</html>
+
