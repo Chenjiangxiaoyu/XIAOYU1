@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小肥鱼 · 桌面演示</title>
+  <meta name="description" content="小肥鱼桌面邮件助手互动演示，模拟邮件、提醒与对话。">
+  <style>
+    :root{font-family:"Microsoft YaHei","Segoe UI",sans-serif;color:#edf0ff;font-size:14px}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;overflow:hidden;background:#151b37}
+    button,input,textarea{font:inherit}button{cursor:pointer}
+    .desktop{position:relative;width:100vw;height:100vh;min-height:560px;overflow:hidden;background:radial-gradient(ellipse 70% 58% at 79% 11%,#ffffff99,transparent 78%),radial-gradient(ellipse 48% 52% at 14% 77%,#8ac2ef88,transparent 75%),linear-gradient(140deg,#e4f3ff 0%,#b9dcfa 51%,#a4cef1 100%)}
+    .desktop:before{content:"";position:absolute;inset:-10%;background:linear-gradient(125deg,transparent 38%,#ffffff0b 39%,transparent 48%),linear-gradient(18deg,transparent 57%,#7f87e71c 58%,transparent 76%);pointer-events:none}
+    .desklabel{position:absolute;top:26px;left:32px;opacity:.8;display:flex;gap:10px;align-items:center}.desklabel b{font-size:18px}.desklabel span{font-size:12px;color:#b8c5ec}
+    .desktopicons{position:absolute;top:104px;left:35px;display:grid;gap:24px}.desktopicons div{width:70px;text-align:center;color:#dce4ff;text-shadow:0 1px 4px #10152e;font-size:12px}.desktopicons i{display:grid;place-items:center;width:47px;height:47px;margin:0 auto 5px;border-radius:10px;background:#dceaff20;border:1px solid #ffffff2d;font-style:normal;font-size:23px}
+    .taskbar{position:absolute;bottom:0;left:0;right:0;height:48px;background:#0a1027b8;border-top:1px solid #bfc8ff29;display:flex;align-items:center;justify-content:space-between;padding:0 19px;backdrop-filter:blur(18px);color:#c5ceee;font-size:12px}.taskbar .left{display:flex;align-items:center;gap:19px;font-size:19px}.taskbar time{text-align:right;line-height:1.4}
+    .badge{position:absolute;right:35px;bottom:83px;width:66px;height:66px;border:0;border-radius:50%;color:white;background:linear-gradient(145deg,#8f79ff,#5569f8);box-shadow:0 12px 36px #03082174,0 0 0 3px #ffffff55 inset;display:grid;place-items:center;font-size:29px;cursor:grab;touch-action:none;z-index:10}.badge:active{cursor:grabbing}.badge.flash{animation:flash .7s ease-in-out 4}@keyframes flash{50%{box-shadow:0 0 0 12px #aa99ff88,0 0 36px 16px #a99cff}}
+    .window{position:absolute;left:max(20px,calc(50% - 205px));top:max(18px,calc(50% - 285px));width:410px;height:570px;min-width:390px;min-height:500px;background:#181c2c;border:1px solid #8489cb7a;border-radius:19px;box-shadow:0 25px 75px #02071cb8;z-index:20;display:flex;flex-direction:column;overflow:hidden}.window.hidden{display:none}
+    .titlebar{height:57px;flex:0 0 57px;display:flex;align-items:center;gap:10px;padding:0 13px;background:#24283e;cursor:move;user-select:none;touch-action:none}.brandicon{display:grid;place-items:center;width:37px;height:37px;border-radius:12px;background:#6e62ef;font-size:18px}.title{font-size:17px;font-weight:700;flex:1}.small{font-size:11px;color:#9ba6cf}.iconbtn{border:0;background:#343a55;color:#e6e8ff;border-radius:10px;width:34px;height:34px;font-size:17px}.iconbtn:hover{background:#505b80}
+    .statusbar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;color:#cad5ff;font-size:12px;flex:none}.statusbar b{color:#9cddaf}.statusbar .time{color:#aaafd3}
+    nav{display:grid;grid-template-columns:repeat(4,1fr);gap:5px 6px;padding:0 12px 10px;flex:none}nav button{height:32px;border-radius:9px;border:1px solid #454c70;background:#262c44;color:#d3d9f4;font-size:12px;white-space:nowrap}nav button.active{background:#6b62ed;color:#fff;border-color:#8880ff;font-weight:700}
+    .content{margin:0 10px 10px;min-height:0;flex:1;border:1px solid #424960;border-radius:13px;background:#222637;display:flex;flex-direction:column;overflow:hidden}.pagehead{padding:12px 13px;border-bottom:1px solid #3a4159;font-weight:700;display:flex;justify-content:space-between;align-items:center;flex:none}.pagehead small{font-weight:400;color:#a7b0d4}.mailbox{overflow:auto;flex:1}.mailitem{padding:12px 13px;border-bottom:1px solid #3c4358;cursor:pointer}.mailitem:hover,.mailitem.selected{background:#333b58}.mailfrom{font-size:12px;color:#b1c2e6;display:flex;justify-content:space-between;gap:8px}.subject{font-size:14px;font-weight:700;margin:5px 0;color:#f5f6ff}.meta{font-size:11px;color:#a6b1d3}.priority{color:#ffda85}.empty{height:100%;display:grid;place-items:center;text-align:center;color:#a8b4d4;line-height:1.8;padding:20px}.detail{padding:13px;overflow:auto;flex:1;white-space:pre-wrap;line-height:1.75}.detail h3{font-size:15px;margin:0 0 10px}.detail .tag{display:inline-block;border-radius:7px;background:#444b7e;padding:2px 8px;margin:0 5px 9px 0;color:#e9edff;font-size:11px}.detail p{margin:7px 0}.back{border:0;background:none;color:#bcb3ff;padding:0 0 10px}
+    .context{position:absolute;z-index:40;min-width:182px;background:#171b29;border:1px solid #777ca6;border-radius:10px;padding:5px;box-shadow:0 14px 35px #0009}.context.hidden{display:none}.context button{display:block;width:100%;text-align:left;border:0;background:none;color:#e6e9ff;border-radius:6px;padding:8px 9px;font-size:12px}.context button:hover{background:#4d5275}.context hr{border:0;border-top:1px solid #464c66;margin:4px}
+    .chat{display:flex;flex-direction:column;flex:1;min-height:0;background:#e9edf5;color:#242739}.typing{height:29px;padding:6px 12px;color:#69749a;font-size:12px;flex:none;text-align:left}.messages{overflow:auto;flex:1;padding:8px 12px 18px}.msg{display:flex;gap:8px;margin:0 0 14px;align-items:flex-start}.msg.you{flex-direction:row-reverse}.avatar{width:31px;height:31px;border-radius:50%;background:#7077df;color:#fff;display:grid;place-items:center;flex:none;font-size:13px}.msg.you .avatar{background:#576cd8}.bubble{max-width:76%;background:#fff;border-radius:12px;padding:9px 11px;white-space:pre-wrap;line-height:1.55;box-shadow:0 2px 5px #2222}.msg.you .bubble{background:#9bee74}.compose{padding:10px;border-top:1px solid #ccd2df;background:#eef1f6;display:flex;gap:8px;align-items:end}.compose textarea{flex:1;min-height:47px;max-height:100px;resize:vertical;border:2px solid #febf00;border-radius:10px;background:#e2e2e2;padding:10px;outline:none}.compose textarea:focus{background:#fff;border-width:3px}.compose button{height:36px;border:0;border-radius:8px;background:#6d67e8;color:white;padding:0 15px}
+    .guide{position:absolute;z-index:15;top:25%;left:calc(50% + 225px);width:220px;padding:15px 16px;border-radius:14px;background:#fff;color:#273054;box-shadow:0 12px 40px #0005;font-size:13px;line-height:1.6}.guide.hidden{display:none}.guide:before{content:"";position:absolute;left:-8px;top:29px;border-right:8px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent}.guide b{color:#655be8}
+    .toast{position:absolute;left:0;top:0;z-index:60;width:min(330px,calc(100vw - 40px));background:#282d48;border:1px solid #8389c0;border-radius:12px;padding:15px;box-shadow:0 14px 35px #0009;white-space:pre-wrap;line-height:1.6}.toast.hidden{display:none}.toast strong{display:block;color:#b8a7ff;margin-bottom:6px}
+    .modalshade{position:absolute;inset:0;z-index:70;background:#0007;display:grid;place-items:center}.modalshade.hidden{display:none}.modal{width:min(340px,calc(100vw - 36px));padding:19px;border-radius:15px;background:#252a42;border:1px solid #7177a4;box-shadow:0 15px 50px #0008}.modal h3{margin:0 0 10px}.modal p{line-height:1.6}.modal button{background:#6d67e8;border:0;color:white;padding:9px 16px;border-radius:8px;float:right}
+    .edge{position:absolute;z-index:30;touch-action:none}.edge.n,.edge.s{left:9px;right:9px;height:8px;cursor:ns-resize}.edge.n{top:0}.edge.s{bottom:0}.edge.e,.edge.w{top:9px;bottom:9px;width:8px;cursor:ew-resize}.edge.e{right:0}.edge.w{left:0}.edge.nw,.edge.ne,.edge.sw,.edge.se{width:15px;height:15px}.edge.nw{top:0;left:0;cursor:nwse-resize}.edge.ne{top:0;right:0;cursor:nesw-resize}.edge.sw{bottom:0;left:0;cursor:nesw-resize}.edge.se{bottom:0;right:0;cursor:nwse-resize}
+    @media(max-width:760px){.window{left:10px;top:70px;width:min(410px,calc(100vw - 20px));height:min(570px,calc(100vh - 80px));min-width:300px;min-height:400px}.guide{top:auto;bottom:63px;left:10px;width:min(320px,calc(100vw - 20px))}.guide:before{display:none}.desktopicons{display:none}}
+  </style>
+</head>
+<body>
+  <main class="desktop" id="desktop">
+    <div class="desklabel"><b>桌面演示</b><span>小肥鱼 · 网页预览</span></div>
+    <div class="desktopicons"><div><i>📁</i>文档</div><div><i>🖼️</i>图片</div><div><i>🌐</i>浏览器</div></div>
+    <button class="badge" id="badge" aria-label="打开小肥鱼窗口" title="拖动图标，点击打开">✉</button>
+    <section class="window hidden" id="window" aria-label="小肥鱼邮件窗口">
+      <header class="titlebar" id="titlebar"><span class="brandicon">✉</span><span class="title">小肥鱼 <span class="small">演示版</span></span><button class="iconbtn" id="refresh" title="刷新列表">↻</button><button class="iconbtn" id="hide" title="收起窗口">×</button></header>
+      <div class="statusbar"><span>状态：<b>演示模式 · 已连接</b></span><span class="time" id="clock"></span></div>
+      <nav id="nav" aria-label="页面切换"></nav>
+      <div class="content" id="content"></div>
+      <div class="edge n" data-edge="n"></div><div class="edge s" data-edge="s"></div><div class="edge e" data-edge="e"></div><div class="edge w" data-edge="w"></div><div class="edge nw" data-edge="nw"></div><div class="edge ne" data-edge="ne"></div><div class="edge sw" data-edge="sw"></div><div class="edge se" data-edge="se"></div>
+    </section>
+    <div class="context hidden" id="context"></div><aside class="guide hidden" id="guide"></aside><aside class="toast hidden" id="toast" role="status"></aside>
+    <div class="modalshade hidden" id="modalshade"><div class="modal"><h3 id="modalTitle"></h3><p id="modalText"></p><button id="modalClose">知道了</button><div style="clear:both"></div></div></div>
+    <footer class="taskbar"><div class="left"><span>⊞</span><span>⌕</span><span>▣</span></div><time id="taskclock"></time></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
